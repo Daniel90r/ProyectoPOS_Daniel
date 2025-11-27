@@ -29,5 +29,11 @@ namespace ProyectoPOS_1CA_B
             FrmProductos frm = new FrmProductos();
             frm.Show();
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            FrmClientes frm = new FrmClientes();
+            frm.Show();
+        }
     }
 }

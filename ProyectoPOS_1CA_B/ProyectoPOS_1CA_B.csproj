@@ -46,13 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaDatos\CategoriaDAL.cs" />
+    <Compile Include="CapaDatos\ClienteDAl.cs" />
+    <Compile Include="CapaDatos\Conexion.cs" />
+    <Compile Include="CapaEntidades\Categoria.cs" />
+    <Compile Include="CapaEntidades\Clientes.cs" />
+    <Compile Include="CapaEntidades\Clientes2.cs" />
     <Compile Include="CapaEntidades\Producto.cs" />
     <Compile Include="CapaEntidades\Validaciones.cs" />
+    <Compile Include="CapaEntidades\ValidacionesClientes.cs" />
+    <Compile Include="CapaNegocio\CategoriaBLL.cs" />
+    <Compile Include="CapaNegocio\ClienteBLL.cs" />
+    <Compile Include="CapaPresentacion\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapaPresentacion\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCliente2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCliente2.Designer.cs">
+      <DependentUpon>FrmCliente2.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\FrmProductos.cs">
       <SubType>Form</SubType>
@@ -62,8 +89,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CapaPresentacion\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCliente2.resx">
+      <DependentUpon>FrmCliente2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -92,8 +128,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CapaDatos\" />
-    <Folder Include="CapaNegocio\" />
     <Folder Include="Recursos\" />
   </ItemGroup>
   <ItemGroup>
