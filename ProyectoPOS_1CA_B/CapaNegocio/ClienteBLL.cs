@@ -12,7 +12,7 @@ namespace ProyectoPOS_1CA_B.CapaNegocio
 {
     public class ClienteBLL
     {
-        ClienteDAl dAl = new ClienteDAl();
+        ClienteDAL dAl = new ClienteDAL();
         //Creamos un opjeto de la clase ClienteDAl para poder acceder a sus metodos
 
         //metodo para listar todos los registros de la tabla clientes

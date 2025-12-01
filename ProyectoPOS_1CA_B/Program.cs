@@ -17,9 +17,12 @@ namespace ProyectoPOS_1CA_B
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new FrmMenuPrincipal());
+             //Application.Run(new FrmMenuPrincipal());
             //Application.Run(new FrmCliente2());
             //Application.Run(new FrmCategoria());
+            //Application.Run(new FrmPruebas());
+            Application.Run(new FrmRegistrarVenta());
+
         }
     }
 }

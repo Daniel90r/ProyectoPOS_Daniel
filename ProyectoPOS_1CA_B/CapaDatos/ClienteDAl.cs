@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPOS_1CA_B.CapaDatos
 {
-    internal class ClienteDAl
+    internal class ClienteDAL
     {
         //Traer todos los registros
         public DataTable Listar()
@@ -105,7 +105,41 @@ namespace ProyectoPOS_1CA_B.CapaDatos
                     new SqlDataAdapter(cmd).Fill(dt);
                     //sqldataadapter: ejecuta el comando y llena la tabla de memoria
                 }
-            } return dt;//retornar la tabla con los registros 
+            }
+            return dt;//retornar la tabla con los registros 
+        }
+        // Este método sirve para llenar el ComboBox de clientes.
+        public static List<Clientes2> ListarActivos()
+        {
+            List<Clientes2> lista = new List<Clientes2>();
+
+            using (SqlConnection con = new SqlConnection(Conexion.Cadena))
+            {
+                string sql = "SELECT * FROM Cliente WHERE Estado = 1";
+
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    con.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Clientes2
+                            {
+                                Id = Convert.ToInt32(dr["Id"]),
+                                Nombre = dr["Nombre"].ToString(),
+                                Dui = dr["Dui"].ToString(),
+                                Telefono = dr["Telefono"].ToString(),
+                                Correo = dr["Correo"].ToString(),
+                                Estado = Convert.ToBoolean(dr["Estado"])
+                            });
+                        }
+                    }
+                }
+
+            }
+            return lista;
+
         }
     }
 }
