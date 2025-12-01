@@ -62,7 +62,7 @@ namespace ProyectoPOS_1CA_B.CapaPresentacion
             this.dgvCategorias.RowTemplate.Height = 28;
             this.dgvCategorias.Size = new System.Drawing.Size(719, 150);
             this.dgvCategorias.TabIndex = 1;
-            this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick_1);
             // 
             // label2
             // 
@@ -79,6 +79,7 @@ namespace ProyectoPOS_1CA_B.CapaPresentacion
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(346, 34);
             this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged_1);
             // 
             // btnNuevo
             // 
@@ -145,15 +146,6 @@ namespace ProyectoPOS_1CA_B.CapaPresentacion
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Si clickeamos una fila válida
-            if (e.RowIndex >= 0)
-            {
-                categoriaID = Convert.ToInt32(dgvCategorias.Rows[e.RowIndex].Cells["CategoriaID"].Value);
-            }
-           
-        }
 
         #endregion
 

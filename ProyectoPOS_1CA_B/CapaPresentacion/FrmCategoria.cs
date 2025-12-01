@@ -26,47 +26,37 @@ namespace ProyectoPOS_1CA_B.CapaPresentacion
         }
 
         private void FrmCategoria_Load(object sender, EventArgs e)
-        {
-            {
+        {      
                 CargarDatos();
-                HabilitarBotones();
-            }
+                HabilitarBotones();          
+        }
 
-            //METODO PARA HABILITAR BOTONES EDITAR Y ELIMINAR
-            void HabilitarBotones()
+        //METODO PARA HABILITAR BOTONES EDITAR Y ELIMINAR
+        void HabilitarBotones()
+        {
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            dgvCategorias.ClearSelection();
+            dgvCategorias.SelectionChanged += (s, e) =>
             {
-                btnEditar.Enabled = false;
-                btnEliminar.Enabled = false;
-                dgvCategorias.ClearSelection();
-                dgvCategorias.SelectionChanged += (s, e) =>
-                {
-                    bool filaSeleccionada = dgvCategorias.SelectedRows.Count > 0;
-                    btnEditar.Enabled = filaSeleccionada;
-                    btnEliminar.Enabled = filaSeleccionada;
-                };
-            }
-            void CargarDatos()
-            {
-                dgvCategorias.DataSource = bll.Listar();
-                dgvCategorias.ClearSelection();
-                categoriaID = 0;   // Reiniciar ID seleccionado
+                bool filaSeleccionada = dgvCategorias.SelectedRows.Count > 0;
+                btnEditar.Enabled = filaSeleccionada;
+                btnEliminar.Enabled = filaSeleccionada;
+            };
+        }
+        void CargarDatos()
+        {
+            dgvCategorias.DataSource = bll.Listar();
+            dgvCategorias.ClearSelection();
+            categoriaID = 0;   // Reiniciar ID seleccionado
 
-            }
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvCategorias.DataSource = bll.Buscar(txtBuscar.Text);
         }
 
-        private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Si clickeamos una fila válida
-            if (e.RowIndex >= 0)
-            {
-                categoriaID = Convert.ToInt32(dgvCategorias.Rows[e.RowIndex].Cells["CategoriaID"].Value);
-            }
-
-        }
+        
         // BOTÓN NUEVO EVENTO CLICK
         private void btnNuevo_Click(object sender, EventArgs e)
         {           
@@ -129,6 +119,20 @@ namespace ProyectoPOS_1CA_B.CapaPresentacion
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            dgvCategorias.DataSource = bll.Buscar(txtBuscar.Text);
+        }
+
+        private void dgvCategorias_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            // Si clickeamos una fila válida
+            if (e.RowIndex >= 0)
+            {
+                categoriaID = Convert.ToInt32(dgvCategorias.Rows[e.RowIndex].Cells["Id"].Value);
+            }
         }
     }
 }
