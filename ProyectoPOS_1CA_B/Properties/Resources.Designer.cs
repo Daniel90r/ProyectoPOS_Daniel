@@ -63,6 +63,16 @@ namespace ProyectoPOS_1CA_B.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion_de_usuario {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-sesion-de-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap data_backup_19006204 {
             get {
                 object obj = ResourceManager.GetObject("data-backup_19006204", resourceCulture);

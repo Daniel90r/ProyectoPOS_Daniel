@@ -51,6 +51,7 @@
     <Compile Include="CapaDatos\Conexion.cs" />
     <Compile Include="CapaDatos\ProductoDAL.cs" />
     <Compile Include="CapaDatos\TipoPagoDAL.cs" />
+    <Compile Include="CapaDatos\UsuarioDAL.cs" />
     <Compile Include="CapaDatos\Venta.cs" />
     <Compile Include="CapaDatos\VentaDAL.cs" />
     <Compile Include="CapaEntidades\Categoria.cs" />
@@ -59,11 +60,15 @@
     <Compile Include="CapaEntidades\DetalleVenta.cs" />
     <Compile Include="CapaEntidades\Producto.cs" />
     <Compile Include="CapaEntidades\RespuestaOperacion.cs" />
+    <Compile Include="CapaEntidades\Seguridad.cs" />
+    <Compile Include="CapaEntidades\SesionActual.cs" />
     <Compile Include="CapaEntidades\TipoPago.cs" />
+    <Compile Include="CapaEntidades\Usuario.cs" />
     <Compile Include="CapaEntidades\Validaciones.cs" />
     <Compile Include="CapaEntidades\ValidacionesClientes.cs" />
     <Compile Include="CapaNegocio\CategoriaBLL.cs" />
     <Compile Include="CapaNegocio\ClienteBLL.cs" />
+    <Compile Include="CapaNegocio\UsuarioBLL.cs" />
     <Compile Include="CapaNegocio\VentaBLL.cs" />
     <Compile Include="CapaPresentacion\Clientes.cs">
       <SubType>Form</SubType>
@@ -76,6 +81,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCambiarClave.Designer.cs">
+      <DependentUpon>FrmCambiarClave.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\FrmCategoria.cs">
       <SubType>Form</SubType>
@@ -101,6 +112,12 @@
     <Compile Include="CapaPresentacion\FrmCliente2.Designer.cs">
       <DependentUpon>FrmCliente2.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\FrmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +136,12 @@
     <Compile Include="CapaPresentacion\FrmRegistrarVenta.Designer.cs">
       <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\Clientes.resx">
@@ -126,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCambiarClave.resx">
+      <DependentUpon>FrmCambiarClave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
@@ -139,6 +165,9 @@
     <EmbeddedResource Include="CapaPresentacion\FrmCliente2.resx">
       <DependentUpon>FrmCliente2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmRegistrarVenta.resx">
       <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\twitter-alt-circle_12107562.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion-de-usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
