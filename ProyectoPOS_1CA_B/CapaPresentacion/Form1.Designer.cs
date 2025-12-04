@@ -47,19 +47,19 @@
             this.másVendidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.panelCentral = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.logoPOS = new System.Windows.Forms.PictureBox();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCorteCaja = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnVentaRapida = new System.Windows.Forms.Button();
-            this.panelCentral = new System.Windows.Forms.Panel();
-            this.logoPOS = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             this.panelCentral.SuspendLayout();
@@ -79,7 +79,7 @@
             this.cambiarClaveToolStripMenuItem});
             this.menuSuperior.Location = new System.Drawing.Point(0, 0);
             this.menuSuperior.Name = "menuSuperior";
-            this.menuSuperior.Size = new System.Drawing.Size(784, 33);
+            this.menuSuperior.Size = new System.Drawing.Size(784, 36);
             this.menuSuperior.TabIndex = 0;
             this.menuSuperior.Text = "menuStrip1";
             // 
@@ -90,7 +90,7 @@
             this.productosToolStripMenuItem,
             this.categoríasToolStripMenuItem});
             this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
             this.gestiónToolStripMenuItem.Text = "Gestión";
             // 
             // clientesToolStripMenuItem
@@ -162,7 +162,7 @@
             this.registrarVentaToolStripMenuItem,
             this.historialDeVentasToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // registrarVentaToolStripMenuItem
@@ -184,7 +184,7 @@
             this.másVendidoToolStripMenuItem,
             this.cierreDeCajaToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // reporteDiarioToolStripMenuItem
@@ -208,13 +208,20 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(61, 32);
             this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(141, 32);
+            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panelIzquierdo.Controls.Add(this.button2);
+            this.panelIzquierdo.Controls.Add(this.btnReporte);
             this.panelIzquierdo.Controls.Add(this.btnUsuarios);
             this.panelIzquierdo.Controls.Add(this.btnSalir);
             this.panelIzquierdo.Controls.Add(this.btnCorteCaja);
@@ -223,10 +230,72 @@
             this.panelIzquierdo.Controls.Add(this.btnProductos);
             this.panelIzquierdo.Controls.Add(this.btnVentaRapida);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelIzquierdo.Location = new System.Drawing.Point(0, 33);
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 36);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(200, 528);
+            this.panelIzquierdo.Size = new System.Drawing.Size(200, 525);
             this.panelIzquierdo.TabIndex = 1;
+            // 
+            // panelCentral
+            // 
+            this.panelCentral.Controls.Add(this.logoPOS);
+            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentral.Location = new System.Drawing.Point(200, 36);
+            this.panelCentral.Name = "panelCentral";
+            this.panelCentral.Size = new System.Drawing.Size(584, 525);
+            this.panelCentral.TabIndex = 2;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(598, 5);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(598, 28);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "$\"Usuario: {SesionActual.NombreUsuario} - Rol: {SesionActual.Rol}\";";
+            // 
+            // logoPOS
+            // 
+            this.logoPOS.Image = global::ProyectoPOS_1CA_B.Properties.Resources.Gemini_Generated_Image_u3u1r0u3u1r0u3u1;
+            this.logoPOS.Location = new System.Drawing.Point(43, 36);
+            this.logoPOS.Name = "logoPOS";
+            this.logoPOS.Size = new System.Drawing.Size(507, 469);
+            this.logoPOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPOS.TabIndex = 0;
+            this.logoPOS.TabStop = false;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.Bisque;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Image = global::ProyectoPOS_1CA_B.Properties.Resources.twitter_alt_circle_12107562;
+            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.Location = new System.Drawing.Point(12, 441);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(180, 55);
+            this.btnReporte.TabIndex = 9;
+            this.btnReporte.Text = "GENERAR REPORTE";
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Bisque;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Image = global::ProyectoPOS_1CA_B.Properties.Resources.user_3917711;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 380);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(180, 55);
+            this.btnUsuarios.TabIndex = 8;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // btnSalir
             // 
@@ -321,74 +390,6 @@
             this.btnVentaRapida.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnVentaRapida.UseVisualStyleBackColor = false;
             // 
-            // panelCentral
-            // 
-            this.panelCentral.Controls.Add(this.logoPOS);
-            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCentral.Location = new System.Drawing.Point(200, 33);
-            this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(584, 528);
-            this.panelCentral.TabIndex = 2;
-            // 
-            // logoPOS
-            // 
-            this.logoPOS.Image = global::ProyectoPOS_1CA_B.Properties.Resources.Gemini_Generated_Image_u3u1r0u3u1r0u3u1;
-            this.logoPOS.Location = new System.Drawing.Point(43, 36);
-            this.logoPOS.Name = "logoPOS";
-            this.logoPOS.Size = new System.Drawing.Size(507, 469);
-            this.logoPOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPOS.TabIndex = 0;
-            this.logoPOS.TabStop = false;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(598, 5);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(598, 28);
-            this.lblUsuario.TabIndex = 3;
-            this.lblUsuario.Text = "$\"Usuario: {SesionActual.NombreUsuario} - Rol: {SesionActual.Rol}\";";
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Bisque;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Image = global::ProyectoPOS_1CA_B.Properties.Resources.user_3917711;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 380);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(180, 55);
-            this.btnUsuarios.TabIndex = 8;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Bisque;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::ProyectoPOS_1CA_B.Properties.Resources.twitter_alt_circle_12107562;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 441);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 55);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Cerrar Seción";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // cambiarClaveToolStripMenuItem
-            // 
-            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
-            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
-            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
-            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -450,7 +451,7 @@
         private System.Windows.Forms.PictureBox logoPOS;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
     }
 }

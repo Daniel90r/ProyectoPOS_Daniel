@@ -67,5 +67,11 @@ namespace ProyectoPOS_1CA_B
             FrmCambiarClave frm = new FrmCambiarClave();
             frm.ShowDialog();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteVentas frm = new FrmReporteVentas();
+            frm.ShowDialog();
+        }
     }
 }
